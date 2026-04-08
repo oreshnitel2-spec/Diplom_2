@@ -1,5 +1,6 @@
-CREATE_USER = "https://stellarburgers.education-services.ru/api/auth/register"
-DELETE_USER = "https://stellarburgers.education-services.ru/api/auth/user"
-LOGIN_USER = "https://stellarburgers.education-services.ru/api/auth/login"
-CREATE_ORDER= "https://stellarburgers.education-services.ru/api/orders"
+BASE_URL = "https://stellarburgers.education-services.ru/api"
 
+CREATE_USER  = f"{BASE_URL}/auth/register"
+DELETE_USER  = f"{BASE_URL}/auth/user"
+LOGIN_USER   = f"{BASE_URL}/auth/login"
+CREATE_ORDER = f"{BASE_URL}/orders"

@@ -1,6 +1,5 @@
-from utilits import delete_user
 import requests
-from urls import CREATE_USER, CREATE_ORDER
+from urls import CREATE_ORDER
 from data import INGREDIENTS
 import allure
 

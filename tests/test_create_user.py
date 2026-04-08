@@ -1,7 +1,6 @@
 import pytest
 from urls import CREATE_USER
 import requests
-from utilits import delete_user
 import allure
 
 class TestCreateUser:

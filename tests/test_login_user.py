@@ -1,6 +1,5 @@
-from urls import CREATE_USER, LOGIN_USER
+from urls import LOGIN_USER
 import requests
-from utilits import delete_user
 import pytest
 import allure
 from data import LOGIN_PARAMETRIZE
