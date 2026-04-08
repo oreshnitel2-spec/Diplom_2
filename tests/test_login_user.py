@@ -2,7 +2,7 @@ from urls import LOGIN_USER
 import requests
 import pytest
 import allure
-from data import LOGIN_PARAMETRIZE
+from data import LOGIN_PARAMETRIZE, MESSAGE_INVALID_LOGIN_DATA
 
 class TestLoginUser:
     @allure.feature("Авторизация пользователя")
@@ -35,4 +35,4 @@ class TestLoginUser:
         with allure.step("Проверка неуспешной авторизации"):
             assert resp.status_code == 401
             assert body.get("success") is False
-            assert body.get("message") == "email or password are incorrect"
+            assert body.get("message") == MESSAGE_INVALID_LOGIN_DATA

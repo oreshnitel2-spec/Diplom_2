@@ -1,4 +1,5 @@
 import pytest
+from data import MESSAGE_USER_EXISTS, MESSAGE_MISSING_FIELDS
 from urls import CREATE_USER
 import requests
 import allure
@@ -32,8 +33,8 @@ class TestCreateUser:
         with allure.step("Проверка ошибки"):
             assert resp.status_code == 403
             assert body.get("success") is False
-            assert body.get("message") == "User already exists"
- 
+            assert body.get("message") == MESSAGE_USER_EXISTS
+
     
     @allure.feature("Создание пользователя")
     @allure.title("Нельзя создать пользователя с пропущенным полем {missing_field}")
@@ -47,4 +48,4 @@ class TestCreateUser:
         with allure.step("Проверка ошибки"):
             assert resp.status_code == 403
             assert body.get("success") is False
-            assert body.get("message") == "Email, password and name are required fields"
+            assert body.get("message") == MESSAGE_MISSING_FIELDS

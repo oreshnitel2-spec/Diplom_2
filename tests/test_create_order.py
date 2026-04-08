@@ -1,6 +1,6 @@
 import requests
 from urls import CREATE_ORDER
-from data import INGREDIENTS
+from data import INGREDIENTS, MESSAGE_INVALID_INGREDIENTS
 import allure
 
 
@@ -42,7 +42,7 @@ class TestCreateOrder:
         with allure.step("Проверка ответа"):
             assert resp.status_code == 400
             assert body.get("success") is False
-            assert body.get("message") == "Ingredient ids must be provided"
+            assert body.get("message") == MESSAGE_INVALID_INGREDIENTS
 
 
     @allure.feature("Создание заказа")

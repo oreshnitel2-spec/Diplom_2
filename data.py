@@ -7,3 +7,8 @@ LOGIN_PARAMETRIZE = [
     ("wrong@example.com", "correctpass"),
     ("correct@example.com", "wrongpass"),
     ]
+
+MESSAGE_INVALID_INGREDIENTS = "Ingredient ids must be provided"
+MESSAGE_USER_EXISTS = "User already exists"
+MESSAGE_MISSING_FIELDS = "Email, password and name are required fields"
+MESSAGE_INVALID_LOGIN_DATA = "email or password are incorrect"
